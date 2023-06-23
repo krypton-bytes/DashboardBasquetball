@@ -62,20 +62,20 @@
                                             Iniciar sesión
                                         </button>
                                         <hr>
-                                        <a href="index.html" class="btn btn-google btn-user btn-block">
+                                        <a href="{{ route('error404') }}" class="btn btn-google btn-user btn-block">
                                             <i class="fab fa-google fa-fw"></i> Loguearse con Google
                                         </a>
-                                        <a href="index.html" class="btn btn-facebook btn-user btn-block">
+                                        <a href="{{ route('error404') }}" class="btn btn-facebook btn-user btn-block">
                                             <i class="fab fa-facebook-f fa-fw"></i> Loguearse con Facebook
                                         </a>
                                     </form>
-                                    
+
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="forgot-password.html">¿Olvidaste tu contraseña?</a>
+                                        <a class="small" href="{{route('error404')}}">¿Olvidaste tu contraseña?</a>
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="register.html">¡Crar nueva cuenta!</a>
+                                        <a class="small" href="{{route('register')}}">¡Crar nueva cuenta!</a>
                                     </div>
                                 </div>
                             </div>

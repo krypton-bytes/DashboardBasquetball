@@ -3,15 +3,18 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\CrudUsuarioController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\equiposController;
+use App\Http\Controllers\entrenadorController;
+
 Route::post('/form/submit', [RegistrationController::class, 'RegistrationController'])->name('form.submit');
 
 Route::get('/', function () {
-    return view('layout.user.master');
+    return view('index');
 });
-/*
+
 Route::get('/login/register', function () {
     return view('register');
-});*/
+})->name('register');
 
 //Login
 Route::get('/login', function () {
@@ -34,6 +37,30 @@ Route::delete('/admin-crudUsuarios/{id}', [CrudUsuarioController::class, 'destro
 Route::put('/usuarios/{id}/edit', [CrudUsuarioController::class, 'edit'])->name('adminCrudUsuarios.edit');
 // Ruta para procesar la actualización de un usuario específico
 Route::put('/usuarios/{id}', [CrudUsuarioController::class, 'update'])->name('adminCrudUsuarios.update');
+
+
+
+//pruebas
+Route::get('/usuario', [equiposController::class, 'index'])->name('usuarios');
+Route::get('/entrenadores', [entrenadorController::class, 'index'])->name('entrenadores');
+
+Route::get('/publicaciones', function () {
+    return view('user.publicaciones');
+})->name('publicaciones');
+
+Route::get('/clasificaciones', function () {
+    return view('user.clasificaciones');
+})->name('clasificaciones');
+Route::get('/error404', function () {
+    return view('error404');
+})->name('error404');
+Route::get('/inicio', function () {
+    return view('user.inicio');
+})->name('inicio');
+
+
+
+
 
 //Template
 Route::get('/template', function () {
@@ -72,4 +99,3 @@ Route::get('/template-utilities-border', function () {
 Route::get('/template-utilities-color', function () {
     return view('template.utilities-color');
 })->name('colors');
-

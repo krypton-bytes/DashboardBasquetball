@@ -1,5 +1,9 @@
 @extends('layout.admin.master')
-@if(session('permiso') == 1)
+@php
+    $permiso = session('permiso');
+    echo "Valor de permiso: " . $permiso;
+@endphp
+@if(session()->has('permiso') && session('permiso') == 1)
 @section('content')
     <!-- Custom styles for this page -->
     <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
@@ -211,7 +215,7 @@
         }
 
     </script>
-@endsection
-@else
+@endsection    
+@elseif(session()->missing('permiso') || session('permiso') != 1)
     @include('404')
 @endif

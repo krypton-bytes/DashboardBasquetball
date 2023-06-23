@@ -18,7 +18,7 @@
         rel="stylesheet">
 
     <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.css" rel="stylesheet">
+    <link href="../css/sb-admin-2.css" rel="stylesheet">
 
 </head>
 
@@ -34,51 +34,51 @@
                     <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+                                <h1 class="h4 text-gray-900 mb-4">Crear una cuenta</h1>
                             </div>
                             <form method="POST" action="{{route('form.submit')}}" class="user" >
                                 @csrf
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <input type="text" name="first_name" class="form-control form-control-user" id="exampleFirstName"
-                                            placeholder="First Name">
+                                            placeholder="Nombre">
                                     </div>
                                     <div class="col-sm-6">
                                         <input type="text"  name="last_name" class="form-control form-control-user" id="exampleLastName"
-                                            placeholder="Last Name">
+                                            placeholder="Apellidos">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <input type="email"  name="email" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Email Address">
+                                        placeholder="Direccion email">
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <input type="password"  name="password" class="form-control form-control-user"
-                                            id="exampleInputPassword" placeholder="Password">
+                                            id="exampleInputPassword" placeholder="Contraseña">
                                     </div>
                                     <div class="col-sm-6">
                                         <input type="password"  name="repeat_password" class="form-control form-control-user"
-                                            id="exampleRepeatPassword" placeholder="Repeat Password">
+                                            id="exampleRepeatPassword" placeholder="Repetir contraseña">
                                     </div>
                                 </div>
                                 <button class="btn btn-primary btn-user btn-block">
                                     Registrar cuenta
                                 </button>
                                 <hr>
-                                <a href="index.html" class="btn btn-google btn-user btn-block">
-                                    <i class="fab fa-google fa-fw"></i> Register with Google
+                                <a href="{{ route('error404') }}" class="btn btn-google btn-user btn-block">
+                                    <i class="fab fa-google fa-fw"></i> Registrar con Google
                                 </a>
-                                <a href="index.html" class="btn btn-facebook btn-user btn-block">
-                                    <i class="fab fa-facebook-f fa-fw"></i> Register with Facebook
+                                <a href="{{ route('error404') }}" class="btn btn-facebook btn-user btn-block">
+                                    <i class="fab fa-facebook-f fa-fw"></i> Registrar con Facebook
                                 </a>
                             </form>
                             <hr>
                             <div class="text-center">
-                                <a class="small" href="forgot-password.html">Forgot Password?</a>
+                                <a class="small" href="{{ route('error404') }}">¿Olvidaste tu contraseña?</a>
                             </div>
                             <div class="text-center">
-                                <a class="small" href="login.html">Already have an account? Login!</a>
+                                <a class="small" href="{{ route('login') }}">¿Ya tienes una cuenta? Loguearse!</a>
                             </div>
                         </div>
                     </div>

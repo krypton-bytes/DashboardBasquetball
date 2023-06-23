@@ -13,7 +13,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item">
-        <a class="nav-link" href="index.html">
+        <a class="nav-link" href="{{ route('inicio') }}">
             <i class="fas fa-fw fa-tachometer-alt"></i>
             <span>Inicio</span></a>
     </li>
@@ -28,13 +28,29 @@
 
     <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-            aria-expanded="true" aria-controls="collapseTwo">
+        <a class="nav-link collapsed" href="{{route('clasificaciones')}}" >
             <i class="fas fa-fw fa-cog"></i>
-            <span>Clasificacion </span>
+            <span>Clasificaciones </span>
         </a>
     </li>
-
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="{{route('usuarios')}}" >
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Equipos </span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="{{route('entrenadores')}}" >
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Entrenadores </span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="{{route('publicaciones')}}" >
+            <i class="fas fa-fw fa-cog"></i>
+            <span>Publicaciones </span>
+        </a>
+    </li>
     <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
@@ -45,12 +61,12 @@
         <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Rankings:</h6>
-                <a class="collapse-item" href="utilities-color.html">Mini</a>
-                <a class="collapse-item" href="utilities-border.html">Pasarela</a>
-                <a class="collapse-item" href="utilities-animation.html">Micro</a>
+                <a class="collapse-item" href="{{ route('error404') }}">Mini</a>
+                <a class="collapse-item" href="{{ route('error404') }}">Pasarela</a>
+                <a class="collapse-item" href="{{ route('error404') }}">Micro</a>
                 <h6 class="collapse-header">Encuestas:</h6>
-                <a class="collapse-item" href="utilities-other.html">Equipo</a>
-                <a class="collapse-item" href="utilities-border.html">Jugador</a>
+                <a class="collapse-item" href="{{ route('error404') }}">Equipo</a>
+                <a class="collapse-item" href="{{ route('error404') }}">Jugador</a>
             </div>
         </div>
     </li>
@@ -67,9 +83,9 @@
         </a>
         <div id="collapsePages" class="collapse show" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="login.html">Fotos</a>
-                <a class="collapse-item" href="register.html">Videos</a>
-                <a class="collapse-item" href="forgot-password.html">Noticias</a>
+                <a class="collapse-item" href="{{ route('error404') }}">Fotos</a>
+                <a class="collapse-item" href="{{ route('error404') }}">Videos</a>
+                <a class="collapse-item" href="{{ route('error404') }}">Noticias</a>
 
             </div>
         </div>
